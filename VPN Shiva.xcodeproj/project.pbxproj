@@ -49,21 +49,11 @@
 			);
 			target = 2DC279032D4B79EF00406AAA /* VPNTunnelProvider */;
 		};
-		2DC2791F2D4B92B400406AAA /* Exceptions for "VPN Shiva" folder in "VPN Shiva" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"VPN-Shiva-Info.plist",
-			);
-			target = 2DC278E32D4B725200406AAA /* VPN Shiva */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2DC278E62D4B725200406AAA /* VPN Shiva */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				2DC2791F2D4B92B400406AAA /* Exceptions for "VPN Shiva" folder in "VPN Shiva" target */,
-			);
 			path = "VPN Shiva";
 			sourceTree = "<group>";
 		};

@@ -17,10 +17,10 @@ class VLESSSession {
     func start(host: String, port: Int, id: String, path: String) {
         let endpoint = NWEndpoint.hostPort(host: NWEndpoint.Host(host), port: NWEndpoint.Port(integerLiteral: UInt16(port)))
            
-           // Создаем параметры для WebSocket поверх TLS
+           // Параметры для WebSocket поверх TLS
            let parameters = NWParameters(tls: NWProtocolTLS.Options(), tcp: NWProtocolTCP.Options())
            
-           // Добавляем WebSocket как дополнительный протокол
+           // WebSocket как дополнительный протокол
            let wsOptions = NWProtocolWebSocket.Options()
            wsOptions.autoReplyPing = true
            parameters.defaultProtocolStack.applicationProtocols.insert(wsOptions, at: 0)

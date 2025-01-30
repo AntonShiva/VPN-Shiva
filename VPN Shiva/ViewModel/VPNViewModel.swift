@@ -5,9 +5,9 @@
 //  Created by Anton Rasen on 30.01.2025.
 //
 
-import Foundation
+import SwiftUI
 import NetworkExtension
-import Combine
+
 
 class VPNViewModel: ObservableObject {
     @Published var isConnected: Bool = false
