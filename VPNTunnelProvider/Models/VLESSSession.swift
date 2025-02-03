@@ -96,34 +96,34 @@ class VLESSSession {
     
     // Обработка входящих данных
     private func handleWebSocketData(_ data: Data) {
+        print("📥 Received WebSocket data: \(data.count) bytes")
         guard data.count >= 16 else {
-            print("Received data too short")
+            print("❌ Data too short: \(data.count) bytes")
             return
         }
         
-        // Пропускаем первые 16 байт (UUID ответа в VLESS)
         let responseData = data.dropFirst(16)
+        print("📦 Processing data: \(responseData.count) bytes")
         
-        // Отправляем данные в туннель
         packetTunnelFlow?.writePackets([responseData], withProtocols: [NSNumber(value: AF_INET)])
     }
     
     //метод для отправки данных
     func sendDataToTunnel(_ data: Data, uuid: String) {
+        print("📤 Sending data: \(data.count) bytes")
         var packet = Data()
+        
+        guard let uuidData = UUID(uuidString: uuid)?.uuid else {
+            print("❌ Invalid UUID format")
+            return
+        }
         
         // Добавляем VLESS заголовок
         packet.append(vlessVersion)
-        
-        // Добавляем UUID
-        if let uuidData = UUID(uuidString: uuid)?.uuid {
-            withUnsafeBytes(of: uuidData) { packet.append(contentsOf: $0) }
-        }
-        
-        // Добавляем данные
+        withUnsafeBytes(of: uuidData) { packet.append(contentsOf: $0) }
         packet.append(data)
         
-        // Отправляем через WebSocket
+        print("📦 Packet prepared: \(packet.count) bytes")
         wsConnection?.send(data: packet)
     }
     

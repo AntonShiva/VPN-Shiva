@@ -81,15 +81,22 @@ class VPNViewModel: ObservableObject {
             
             switch status {
             case .connected:
+                print("✅ VPN Connected")
                 self?.isConnected = true
                 self?.connectionStatus = "Подключено"
-            case .disconnected:
-                self?.isConnected = false
-                self?.connectionStatus = "Отключено"
             case .connecting:
+                print("🔄 VPN Connecting...")
                 self?.connectionStatus = "Подключение..."
             case .disconnecting:
+                print("🔄 VPN Disconnecting...")
                 self?.connectionStatus = "Отключение..."
+            case .disconnected:
+                print("❌ VPN Disconnected")
+                self?.isConnected = false
+                self?.connectionStatus = "Отключено"
+            case .invalid:
+                print("⚠️ VPN Configuration Invalid")
+                self?.connectionStatus = "Ошибка конфигурации"
             default:
                 break
             }

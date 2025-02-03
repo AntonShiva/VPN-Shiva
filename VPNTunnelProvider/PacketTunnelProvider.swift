@@ -13,14 +13,23 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     private var vlessConfig: VLESSConfig?
     
     override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
+        
+        print("🚀 Starting VPN tunnel...")
+        
          guard let providerConfig = (protocolConfiguration as? NETunnelProviderProtocol)?.providerConfiguration,
                let host = providerConfig["host"] as? String,
                let port = providerConfig["port"] as? Int,
                let id = providerConfig["id"] as? String,
                let path = providerConfig["path"] as? String else {
+             
+             print("❌ Missing configuration")
+             
              completionHandler(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Missing configuration"]))
              return
          }
+        
+        print("📝 Configuration loaded - Host: \(host), Port: \(port), Path: \(path)")
+        
         // Создаем конфигурацию
          vlessConfig = VLESSConfig(
              id: id,
@@ -56,7 +65,10 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
      }
     
     private func startPacketForwarding() {
-         packetFlow.readPackets { [weak self] packets, protocols in
+        print("📦 Starting packet forwarding...")
+            packetFlow.readPackets { [weak self] packets, protocols in
+                print("📨 Received \(packets.count) packets")
+                
              guard let self = self,
                    let vlessSession = self.vlessSession,
                    let config = self.vlessConfig else {
