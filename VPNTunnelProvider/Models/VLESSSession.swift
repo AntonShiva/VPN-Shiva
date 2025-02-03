@@ -14,6 +14,14 @@ class VLESSSession {
     private var connection: NWConnection?
     private var wsConnection: WebSocketConnection?
     
+    private let vlessVersion: UInt8 = 0
+    private var packetTunnelFlow: NEPacketTunnelFlow?
+    
+   // метод для инициализации с packetFlow
+    func initialize(withPacketFlow packetFlow: NEPacketTunnelFlow) {
+        self.packetTunnelFlow = packetFlow
+    }
+    
     func start(host: String, port: Int, id: String, path: String) {
         let endpoint = NWEndpoint.hostPort(host: NWEndpoint.Host(host), port: NWEndpoint.Port(integerLiteral: UInt16(port)))
            
@@ -88,9 +96,35 @@ class VLESSSession {
     
     // Обработка входящих данных
     private func handleWebSocketData(_ data: Data) {
-        // Здесь будет обработка данных VLESS протокола
-        // Пока просто логируем
-        print("Received WebSocket data: \(data.count) bytes")
+        guard data.count >= 16 else {
+            print("Received data too short")
+            return
+        }
+        
+        // Пропускаем первые 16 байт (UUID ответа в VLESS)
+        let responseData = data.dropFirst(16)
+        
+        // Отправляем данные в туннель
+        packetTunnelFlow?.writePackets([responseData], withProtocols: [NSNumber(value: AF_INET)])
+    }
+    
+    //метод для отправки данных
+    func sendDataToTunnel(_ data: Data, uuid: String) {
+        var packet = Data()
+        
+        // Добавляем VLESS заголовок
+        packet.append(vlessVersion)
+        
+        // Добавляем UUID
+        if let uuidData = UUID(uuidString: uuid)?.uuid {
+            withUnsafeBytes(of: uuidData) { packet.append(contentsOf: $0) }
+        }
+        
+        // Добавляем данные
+        packet.append(data)
+        
+        // Отправляем через WebSocket
+        wsConnection?.send(data: packet)
     }
     
     func stop() {
