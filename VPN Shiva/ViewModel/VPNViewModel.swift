@@ -74,4 +74,39 @@ class VPNViewModel: ObservableObject {
              self?.providerManager = manager
          }
      }
+    
+    private func monitorVPNStatus() {
+        NotificationCenter.default.addObserver(forName: .NEVPNStatusDidChange, object: nil, queue: .main) { [weak self] _ in
+            guard let status = self?.providerManager?.connection.status else { return }
+            
+            switch status {
+            case .connected:
+                self?.isConnected = true
+                self?.connectionStatus = "Подключено"
+            case .disconnected:
+                self?.isConnected = false
+                self?.connectionStatus = "Отключено"
+            case .connecting:
+                self?.connectionStatus = "Подключение..."
+            case .disconnecting:
+                self?.connectionStatus = "Отключение..."
+            default:
+                break
+            }
+        }
+    }
+    
+    func toggleConnection() {
+        guard let manager = providerManager else { return }
+        
+        if manager.connection.status == .connected {
+            manager.connection.stopVPNTunnel()
+        } else {
+            do {
+                try manager.connection.startVPNTunnel()
+            } catch {
+                print("Ошибка запуска VPN: \(error.localizedDescription)")
+            }
+        }
+    }
 }

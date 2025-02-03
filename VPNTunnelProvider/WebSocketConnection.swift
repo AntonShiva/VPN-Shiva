@@ -61,7 +61,11 @@ class WebSocketConnection {
     }
     
     func send(data: Data) {
-        // Отправка данных через WebSocket
+        connection?.send(content: data, completion: .contentProcessed { error in
+            if let error = error {
+                self.onError?(error)
+            }
+        })
     }
     
    

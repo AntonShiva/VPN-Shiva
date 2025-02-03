@@ -20,7 +20,7 @@ struct VPNView: View {
                 .font(.headline)
             
             Button(action: {
-                
+                viewModel.toggleConnection()
             }) {
                 Text(viewModel.isConnected ? "Отключить" : "Подключить")
                     .font(.title2)
