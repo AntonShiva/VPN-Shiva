@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D763A042D54E5B100C739A5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D763A032D54E5B100C739A5 /* Logger.swift */; };
+		2D763A052D54E5B100C739A5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D763A032D54E5B100C739A5 /* Logger.swift */; };
+		2D90FDB32D54C49600846D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90FDB22D54C49600846D1C /* Constants.swift */; };
+		2D90FDB42D54C4DE00846D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90FDB22D54C49600846D1C /* Constants.swift */; };
+		2D90FDB62D54C86400846D1C /* ConnectionStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90FDB52D54C86400846D1C /* ConnectionStats.swift */; };
+		2D90FDB72D54C86400846D1C /* ConnectionStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90FDB52D54C86400846D1C /* ConnectionStats.swift */; };
 		2DC279072D4B79EF00406AAA /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC279062D4B79EF00406AAA /* NetworkExtension.framework */; };
 		2DC2790F2D4B79EF00406AAA /* VPNTunnelProvider.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2DC279042D4B79EF00406AAA /* VPNTunnelProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -36,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D763A032D54E5B100C739A5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		2D90FDB22D54C49600846D1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2D90FDB52D54C86400846D1C /* ConnectionStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStats.swift; sourceTree = "<group>"; };
 		2DC278E42D4B725200406AAA /* VPN Shiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VPN Shiva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC279042D4B79EF00406AAA /* VPNTunnelProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNTunnelProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC279062D4B79EF00406AAA /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
@@ -86,9 +95,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D90FDB12D54C45500846D1C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2D90FDB22D54C49600846D1C /* Constants.swift */,
+				2D90FDB52D54C86400846D1C /* ConnectionStats.swift */,
+				2D763A032D54E5B100C739A5 /* Logger.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		2DC278DB2D4B725200406AAA = {
 			isa = PBXGroup;
 			children = (
+				2D90FDB12D54C45500846D1C /* Shared */,
 				2DC278E62D4B725200406AAA /* VPN Shiva */,
 				2DC279082D4B79EF00406AAA /* VPNTunnelProvider */,
 				2DC279052D4B79EF00406AAA /* Frameworks */,
@@ -222,6 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D90FDB72D54C86400846D1C /* ConnectionStats.swift in Sources */,
+				2D90FDB32D54C49600846D1C /* Constants.swift in Sources */,
+				2D763A052D54E5B100C739A5 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D90FDB42D54C4DE00846D1C /* Constants.swift in Sources */,
+				2D90FDB62D54C86400846D1C /* ConnectionStats.swift in Sources */,
+				2D763A042D54E5B100C739A5 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,9 +405,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,11 +417,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -416,9 +442,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,11 +454,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

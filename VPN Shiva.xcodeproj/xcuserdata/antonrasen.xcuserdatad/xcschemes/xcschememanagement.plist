@@ -7,12 +7,27 @@
 		<key>VPN Shiva.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>VPNTunnelProvider.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2DC278E32D4B725200406AAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DC279032D4B79EF00406AAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

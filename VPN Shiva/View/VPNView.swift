@@ -23,16 +23,46 @@ struct VPNView: View {
                 viewModel.toggleConnection()
             }) {
                 Text(viewModel.isConnected ? "Отключить" : "Подключить")
-                    .font(.title2)
                     .foregroundColor(.white)
-                    .frame(width: 200, height: 50)
-                    .background(viewModel.isConnected ? Color.red : Color.blue)
+                    .padding()
+                    .background(viewModel.isConnected ? Color.red : Color.green)
                     .cornerRadius(10)
             }
-        }
-        .padding()
-    }
-}
+            .disabled(viewModel.connectionStatus == "Подключение..." ||
+                     viewModel.connectionStatus == "Отключение...")
+            
+            
+            // Добавляем отображение статистики
+                        if viewModel.isConnected {
+                            VStack(spacing: 10) {
+                                Text("Статистика:")
+                                    .font(.headline)
+                                
+                                HStack(spacing: 20) {
+                                    VStack {
+                                        Image(systemName: "arrow.down.circle.fill")
+                                        Text("\(formatBytes(viewModel.connectionStats.download))")
+                                    }
+                                    
+                                    VStack {
+                                        Image(systemName: "arrow.up.circle.fill")
+                                        Text("\(formatBytes(viewModel.connectionStats.upload))")
+                                    }
+                                }
+                            }
+                            .padding(.top)
+                        }
+                    }
+                    .padding()
+                }
+                
+                private func formatBytes(_ bytes: Int) -> String {
+                    let formatter = ByteCountFormatter()
+                    formatter.allowedUnits = [.useBytes, .useKB, .useMB, .useGB]
+                    formatter.countStyle = .file
+                    return formatter.string(fromByteCount: Int64(bytes))
+                }
+            }
 
 #Preview {
     VPNView()

@@ -11,7 +11,7 @@ import SwiftUI
 struct VPN_ShivaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VPNView()
         }
     }
 }

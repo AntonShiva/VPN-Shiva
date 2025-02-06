@@ -7,11 +7,17 @@
 
 import Foundation
 
-struct VLESSConfig {
+struct VLESSConfig: Codable {
     let id: String
     let host: String
     let port: Int
-    let path: String
     let type: String
     let encryption: String
+    let wsPath: String?
+    let wsHost: String?
+    let security: String?
+    let sni: String?
+    let pbk: String?     // Добавляем поля для REALITY
+    let fp: String?      // Fingerprint
+    let sid: String?     // ShortID
 }
