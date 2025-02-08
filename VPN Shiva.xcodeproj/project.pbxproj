@@ -7,18 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D089C762D566D300055D81C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC279062D4B79EF00406AAA /* NetworkExtension.framework */; };
+		2D089C772D566D440055D81C /* VPNTunnelProvider.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2DC279042D4B79EF00406AAA /* VPNTunnelProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2D089C7D2D566D700055D81C /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D089BE32D5663E50055D81C /* Network.framework */; };
+		2D089C7E2D566D7D0055D81C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC279062D4B79EF00406AAA /* NetworkExtension.framework */; };
+		2D089C7F2D566D870055D81C /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D089BE32D5663E50055D81C /* Network.framework */; };
 		2D763A042D54E5B100C739A5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D763A032D54E5B100C739A5 /* Logger.swift */; };
 		2D763A052D54E5B100C739A5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D763A032D54E5B100C739A5 /* Logger.swift */; };
 		2D90FDB32D54C49600846D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90FDB22D54C49600846D1C /* Constants.swift */; };
 		2D90FDB42D54C4DE00846D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90FDB22D54C49600846D1C /* Constants.swift */; };
 		2D90FDB62D54C86400846D1C /* ConnectionStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90FDB52D54C86400846D1C /* ConnectionStats.swift */; };
 		2D90FDB72D54C86400846D1C /* ConnectionStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D90FDB52D54C86400846D1C /* ConnectionStats.swift */; };
-		2DC279072D4B79EF00406AAA /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC279062D4B79EF00406AAA /* NetworkExtension.framework */; };
-		2DC2790F2D4B79EF00406AAA /* VPNTunnelProvider.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2DC279042D4B79EF00406AAA /* VPNTunnelProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2DE10C3F2D57A14B00B7BC27 /* Profile+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C122D57A14B00B7BC27 /* Profile+Date.swift */; };
+		2DE10C402D57A14B00B7BC27 /* ExtensionEnvironments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C222D57A14B00B7BC27 /* ExtensionEnvironments.swift */; };
+		2DE10C412D57A14B00B7BC27 /* ExtensionErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C232D57A14B00B7BC27 /* ExtensionErrors.swift */; };
+		2DE10C422D57A14B00B7BC27 /* Profile+RW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C142D57A14B00B7BC27 /* Profile+RW.swift */; };
+		2DE10C432D57A14B00B7BC27 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C322D57A14B00B7BC27 /* Application.swift */; };
+		2DE10C442D57A14B00B7BC27 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C272D57A14B00B7BC27 /* HTTPClient.swift */; };
+		2DE10C452D57A14B00B7BC27 /* FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C2D2D57A14B00B7BC27 /* FilePath.swift */; };
+		2DE10C462D57A14B00B7BC27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C352D57A14B00B7BC27 /* ContentView.swift */; };
+		2DE10C472D57A14B00B7BC27 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C372D57A14B00B7BC27 /* MainView.swift */; };
+		2DE10C482D57A14B00B7BC27 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C112D57A14B00B7BC27 /* Profile.swift */; };
+		2DE10C492D57A14B00B7BC27 /* ProfileServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C1D2D57A14B00B7BC27 /* ProfileServer.swift */; };
+		2DE10C4A2D57A14B00B7BC27 /* SystemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C292D57A14B00B7BC27 /* SystemExtension.swift */; };
+		2DE10C4B2D57A14B00B7BC27 /* CommandClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C1F2D57A14B00B7BC27 /* CommandClient.swift */; };
+		2DE10C4C2D57A14B00B7BC27 /* Extension+Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C202D57A14B00B7BC27 /* Extension+Iterator.swift */; };
+		2DE10C4D2D57A14B00B7BC27 /* ExtensionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C262D57A14B00B7BC27 /* ExtensionProvider.swift */; };
+		2DE10C4E2D57A14B00B7BC27 /* NEVPNStatus+isConnected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C282D57A14B00B7BC27 /* NEVPNStatus+isConnected.swift */; };
+		2DE10C4F2D57A14B00B7BC27 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C2C2D57A14B00B7BC27 /* Color+Extension.swift */; };
+		2DE10C502D57A14B00B7BC27 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C332D57A14B00B7BC27 /* ApplicationDelegate.swift */; };
+		2DE10C512D57A14B00B7BC27 /* Profile+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C172D57A14B00B7BC27 /* Profile+Update.swift */; };
+		2DE10C522D57A14B00B7BC27 /* Profile+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C132D57A14B00B7BC27 /* Profile+Hashable.swift */; };
+		2DE10C532D57A14B00B7BC27 /* Variant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C2E2D57A14B00B7BC27 /* Variant.swift */; };
+		2DE10C542D57A14B00B7BC27 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C302D57A14B00B7BC27 /* Library.swift */; };
+		2DE10C552D57A14B00B7BC27 /* NWSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C1C2D57A14B00B7BC27 /* NWSocket.swift */; };
+		2DE10C562D57A14B00B7BC27 /* Profile+Transferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C162D57A14B00B7BC27 /* Profile+Transferable.swift */; };
+		2DE10C572D57A14B00B7BC27 /* Extension+RunBlocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C212D57A14B00B7BC27 /* Extension+RunBlocking.swift */; };
+		2DE10C582D57A14B00B7BC27 /* ExtensionPlatformInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C242D57A14B00B7BC27 /* ExtensionPlatformInterface.swift */; };
+		2DE10C592D57A14B00B7BC27 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C182D57A14B00B7BC27 /* ProfileManager.swift */; };
+		2DE10C5A2D57A14B00B7BC27 /* Profile+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C152D57A14B00B7BC27 /* Profile+Share.swift */; };
+		2DE10C5B2D57A14B00B7BC27 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C1A2D57A14B00B7BC27 /* SharedPreferences.swift */; };
+		2DE10C5C2D57A14B00B7BC27 /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C2B2D57A14B00B7BC27 /* Bundle+Version.swift */; };
+		2DE10C5D2D57A14B00B7BC27 /* ShadredPreferences+Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C192D57A14B00B7BC27 /* ShadredPreferences+Database.swift */; };
+		2DE10C5E2D57A14B00B7BC27 /* Databse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C102D57A14B00B7BC27 /* Databse.swift */; };
+		2DE10C5F2D57A14B00B7BC27 /* ExtensionProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C252D57A14B00B7BC27 /* ExtensionProfile.swift */; };
+		2DE10C612D57A14B00B7BC27 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE10C362D57A14B00B7BC27 /* Info.plist */; };
+		2DE10C622D57A14B00B7BC27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE10C342D57A14B00B7BC27 /* Assets.xcassets */; };
+		2DE10C642D57A14B00B7BC27 /* Upload.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE10C392D57A14B00B7BC27 /* Upload.plist */; };
+		2DE10C652D57A14B00B7BC27 /* Profile+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C122D57A14B00B7BC27 /* Profile+Date.swift */; };
+		2DE10C662D57A14B00B7BC27 /* ExtensionEnvironments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C222D57A14B00B7BC27 /* ExtensionEnvironments.swift */; };
+		2DE10C672D57A14B00B7BC27 /* ExtensionErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C232D57A14B00B7BC27 /* ExtensionErrors.swift */; };
+		2DE10C682D57A14B00B7BC27 /* Profile+RW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C142D57A14B00B7BC27 /* Profile+RW.swift */; };
+		2DE10C692D57A14B00B7BC27 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C322D57A14B00B7BC27 /* Application.swift */; };
+		2DE10C6A2D57A14B00B7BC27 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C272D57A14B00B7BC27 /* HTTPClient.swift */; };
+		2DE10C6B2D57A14B00B7BC27 /* FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C2D2D57A14B00B7BC27 /* FilePath.swift */; };
+		2DE10C6C2D57A14B00B7BC27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C352D57A14B00B7BC27 /* ContentView.swift */; };
+		2DE10C6D2D57A14B00B7BC27 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C372D57A14B00B7BC27 /* MainView.swift */; };
+		2DE10C6E2D57A14B00B7BC27 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C112D57A14B00B7BC27 /* Profile.swift */; };
+		2DE10C6F2D57A14B00B7BC27 /* ProfileServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C1D2D57A14B00B7BC27 /* ProfileServer.swift */; };
+		2DE10C702D57A14B00B7BC27 /* SystemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C292D57A14B00B7BC27 /* SystemExtension.swift */; };
+		2DE10C712D57A14B00B7BC27 /* CommandClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C1F2D57A14B00B7BC27 /* CommandClient.swift */; };
+		2DE10C722D57A14B00B7BC27 /* Extension+Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C202D57A14B00B7BC27 /* Extension+Iterator.swift */; };
+		2DE10C732D57A14B00B7BC27 /* ExtensionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C262D57A14B00B7BC27 /* ExtensionProvider.swift */; };
+		2DE10C742D57A14B00B7BC27 /* NEVPNStatus+isConnected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C282D57A14B00B7BC27 /* NEVPNStatus+isConnected.swift */; };
+		2DE10C752D57A14B00B7BC27 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C2C2D57A14B00B7BC27 /* Color+Extension.swift */; };
+		2DE10C762D57A14B00B7BC27 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C332D57A14B00B7BC27 /* ApplicationDelegate.swift */; };
+		2DE10C772D57A14B00B7BC27 /* Profile+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C172D57A14B00B7BC27 /* Profile+Update.swift */; };
+		2DE10C782D57A14B00B7BC27 /* Profile+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C132D57A14B00B7BC27 /* Profile+Hashable.swift */; };
+		2DE10C792D57A14B00B7BC27 /* Variant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C2E2D57A14B00B7BC27 /* Variant.swift */; };
+		2DE10C7A2D57A14B00B7BC27 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C302D57A14B00B7BC27 /* Library.swift */; };
+		2DE10C7B2D57A14B00B7BC27 /* NWSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C1C2D57A14B00B7BC27 /* NWSocket.swift */; };
+		2DE10C7C2D57A14B00B7BC27 /* Profile+Transferable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C162D57A14B00B7BC27 /* Profile+Transferable.swift */; };
+		2DE10C7D2D57A14B00B7BC27 /* Extension+RunBlocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C212D57A14B00B7BC27 /* Extension+RunBlocking.swift */; };
+		2DE10C7E2D57A14B00B7BC27 /* ExtensionPlatformInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C242D57A14B00B7BC27 /* ExtensionPlatformInterface.swift */; };
+		2DE10C7F2D57A14B00B7BC27 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C182D57A14B00B7BC27 /* ProfileManager.swift */; };
+		2DE10C802D57A14B00B7BC27 /* Profile+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C152D57A14B00B7BC27 /* Profile+Share.swift */; };
+		2DE10C812D57A14B00B7BC27 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C1A2D57A14B00B7BC27 /* SharedPreferences.swift */; };
+		2DE10C822D57A14B00B7BC27 /* Bundle+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C2B2D57A14B00B7BC27 /* Bundle+Version.swift */; };
+		2DE10C832D57A14B00B7BC27 /* ShadredPreferences+Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C192D57A14B00B7BC27 /* ShadredPreferences+Database.swift */; };
+		2DE10C842D57A14B00B7BC27 /* Databse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C102D57A14B00B7BC27 /* Databse.swift */; };
+		2DE10C852D57A14B00B7BC27 /* ExtensionProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE10C252D57A14B00B7BC27 /* ExtensionProfile.swift */; };
+		2DE10C872D57A14B00B7BC27 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE10C362D57A14B00B7BC27 /* Info.plist */; };
+		2DE10C882D57A14B00B7BC27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE10C342D57A14B00B7BC27 /* Assets.xcassets */; };
+		2DE10C8A2D57A14B00B7BC27 /* Upload.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE10C392D57A14B00B7BC27 /* Upload.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2DC2790D2D4B79EF00406AAA /* PBXContainerItemProxy */ = {
+		2D089C782D566D440055D81C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DC278DC2D4B725200406AAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DC279032D4B79EF00406AAA;
+			remoteInfo = VPNTunnelProvider;
+		};
+		2D089C7B2D566D500055D81C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2DC278DC2D4B725200406AAA /* Project object */;
 			proxyType = 1;
@@ -28,13 +110,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2DC279142D4B79EF00406AAA /* Embed Foundation Extensions */ = {
+		2D089C7A2D566D440055D81C /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2DC2790F2D4B79EF00406AAA /* VPNTunnelProvider.appex in Embed Foundation Extensions */,
+				2D089C772D566D440055D81C /* VPNTunnelProvider.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,12 +124,50 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D089BE32D5663E50055D81C /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
 		2D763A032D54E5B100C739A5 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		2D90FDB22D54C49600846D1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2D90FDB52D54C86400846D1C /* ConnectionStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionStats.swift; sourceTree = "<group>"; };
 		2DC278E42D4B725200406AAA /* VPN Shiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VPN Shiva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC279042D4B79EF00406AAA /* VPNTunnelProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNTunnelProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC279062D4B79EF00406AAA /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		2DE10C102D57A14B00B7BC27 /* Databse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Databse.swift; sourceTree = "<group>"; };
+		2DE10C112D57A14B00B7BC27 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		2DE10C122D57A14B00B7BC27 /* Profile+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Date.swift"; sourceTree = "<group>"; };
+		2DE10C132D57A14B00B7BC27 /* Profile+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Hashable.swift"; sourceTree = "<group>"; };
+		2DE10C142D57A14B00B7BC27 /* Profile+RW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+RW.swift"; sourceTree = "<group>"; };
+		2DE10C152D57A14B00B7BC27 /* Profile+Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Share.swift"; sourceTree = "<group>"; };
+		2DE10C162D57A14B00B7BC27 /* Profile+Transferable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Transferable.swift"; sourceTree = "<group>"; };
+		2DE10C172D57A14B00B7BC27 /* Profile+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+Update.swift"; sourceTree = "<group>"; };
+		2DE10C182D57A14B00B7BC27 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		2DE10C192D57A14B00B7BC27 /* ShadredPreferences+Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShadredPreferences+Database.swift"; sourceTree = "<group>"; };
+		2DE10C1A2D57A14B00B7BC27 /* SharedPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreferences.swift; sourceTree = "<group>"; };
+		2DE10C1C2D57A14B00B7BC27 /* NWSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWSocket.swift; sourceTree = "<group>"; };
+		2DE10C1D2D57A14B00B7BC27 /* ProfileServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServer.swift; sourceTree = "<group>"; };
+		2DE10C1F2D57A14B00B7BC27 /* CommandClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandClient.swift; sourceTree = "<group>"; };
+		2DE10C202D57A14B00B7BC27 /* Extension+Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Iterator.swift"; sourceTree = "<group>"; };
+		2DE10C212D57A14B00B7BC27 /* Extension+RunBlocking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+RunBlocking.swift"; sourceTree = "<group>"; };
+		2DE10C222D57A14B00B7BC27 /* ExtensionEnvironments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionEnvironments.swift; sourceTree = "<group>"; };
+		2DE10C232D57A14B00B7BC27 /* ExtensionErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionErrors.swift; sourceTree = "<group>"; };
+		2DE10C242D57A14B00B7BC27 /* ExtensionPlatformInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionPlatformInterface.swift; sourceTree = "<group>"; };
+		2DE10C252D57A14B00B7BC27 /* ExtensionProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionProfile.swift; sourceTree = "<group>"; };
+		2DE10C262D57A14B00B7BC27 /* ExtensionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionProvider.swift; sourceTree = "<group>"; };
+		2DE10C272D57A14B00B7BC27 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		2DE10C282D57A14B00B7BC27 /* NEVPNStatus+isConnected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEVPNStatus+isConnected.swift"; sourceTree = "<group>"; };
+		2DE10C292D57A14B00B7BC27 /* SystemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemExtension.swift; sourceTree = "<group>"; };
+		2DE10C2B2D57A14B00B7BC27 /* Bundle+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Version.swift"; sourceTree = "<group>"; };
+		2DE10C2C2D57A14B00B7BC27 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		2DE10C2D2D57A14B00B7BC27 /* FilePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePath.swift; sourceTree = "<group>"; };
+		2DE10C2E2D57A14B00B7BC27 /* Variant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variant.swift; sourceTree = "<group>"; };
+		2DE10C302D57A14B00B7BC27 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		2DE10C322D57A14B00B7BC27 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		2DE10C332D57A14B00B7BC27 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
+		2DE10C342D57A14B00B7BC27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DE10C352D57A14B00B7BC27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2DE10C362D57A14B00B7BC27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DE10C372D57A14B00B7BC27 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2DE10C382D57A14B00B7BC27 /* SFI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SFI.entitlements; sourceTree = "<group>"; };
+		2DE10C392D57A14B00B7BC27 /* Upload.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Upload.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -81,6 +201,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D089C762D566D300055D81C /* NetworkExtension.framework in Frameworks */,
+				2D089C7D2D566D700055D81C /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +210,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DC279072D4B79EF00406AAA /* NetworkExtension.framework in Frameworks */,
+				2D089C7E2D566D7D0055D81C /* NetworkExtension.framework in Frameworks */,
+				2D089C7F2D566D870055D81C /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +231,7 @@
 		2DC278DB2D4B725200406AAA = {
 			isa = PBXGroup;
 			children = (
+				2DE10C3E2D57A14B00B7BC27 /* Modules */,
 				2D90FDB12D54C45500846D1C /* Shared */,
 				2DC278E62D4B725200406AAA /* VPN Shiva */,
 				2DC279082D4B79EF00406AAA /* VPNTunnelProvider */,
@@ -128,9 +252,110 @@
 		2DC279052D4B79EF00406AAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D089BE32D5663E50055D81C /* Network.framework */,
 				2DC279062D4B79EF00406AAA /* NetworkExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DE10C1B2D57A14B00B7BC27 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2DE10C102D57A14B00B7BC27 /* Databse.swift */,
+				2DE10C112D57A14B00B7BC27 /* Profile.swift */,
+				2DE10C122D57A14B00B7BC27 /* Profile+Date.swift */,
+				2DE10C132D57A14B00B7BC27 /* Profile+Hashable.swift */,
+				2DE10C142D57A14B00B7BC27 /* Profile+RW.swift */,
+				2DE10C152D57A14B00B7BC27 /* Profile+Share.swift */,
+				2DE10C162D57A14B00B7BC27 /* Profile+Transferable.swift */,
+				2DE10C172D57A14B00B7BC27 /* Profile+Update.swift */,
+				2DE10C182D57A14B00B7BC27 /* ProfileManager.swift */,
+				2DE10C192D57A14B00B7BC27 /* ShadredPreferences+Database.swift */,
+				2DE10C1A2D57A14B00B7BC27 /* SharedPreferences.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		2DE10C1E2D57A14B00B7BC27 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				2DE10C1C2D57A14B00B7BC27 /* NWSocket.swift */,
+				2DE10C1D2D57A14B00B7BC27 /* ProfileServer.swift */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		2DE10C2A2D57A14B00B7BC27 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2DE10C1F2D57A14B00B7BC27 /* CommandClient.swift */,
+				2DE10C202D57A14B00B7BC27 /* Extension+Iterator.swift */,
+				2DE10C212D57A14B00B7BC27 /* Extension+RunBlocking.swift */,
+				2DE10C222D57A14B00B7BC27 /* ExtensionEnvironments.swift */,
+				2DE10C232D57A14B00B7BC27 /* ExtensionErrors.swift */,
+				2DE10C242D57A14B00B7BC27 /* ExtensionPlatformInterface.swift */,
+				2DE10C252D57A14B00B7BC27 /* ExtensionProfile.swift */,
+				2DE10C262D57A14B00B7BC27 /* ExtensionProvider.swift */,
+				2DE10C272D57A14B00B7BC27 /* HTTPClient.swift */,
+				2DE10C282D57A14B00B7BC27 /* NEVPNStatus+isConnected.swift */,
+				2DE10C292D57A14B00B7BC27 /* SystemExtension.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2DE10C2F2D57A14B00B7BC27 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2DE10C2B2D57A14B00B7BC27 /* Bundle+Version.swift */,
+				2DE10C2C2D57A14B00B7BC27 /* Color+Extension.swift */,
+				2DE10C2D2D57A14B00B7BC27 /* FilePath.swift */,
+				2DE10C2E2D57A14B00B7BC27 /* Variant.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2DE10C312D57A14B00B7BC27 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				2DE10C1B2D57A14B00B7BC27 /* Database */,
+				2DE10C1E2D57A14B00B7BC27 /* Discovery */,
+				2DE10C2A2D57A14B00B7BC27 /* Network */,
+				2DE10C2F2D57A14B00B7BC27 /* Shared */,
+				2DE10C302D57A14B00B7BC27 /* Library.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		2DE10C3A2D57A14B00B7BC27 /* SFI */ = {
+			isa = PBXGroup;
+			children = (
+				2DE10C322D57A14B00B7BC27 /* Application.swift */,
+				2DE10C332D57A14B00B7BC27 /* ApplicationDelegate.swift */,
+				2DE10C342D57A14B00B7BC27 /* Assets.xcassets */,
+				2DE10C352D57A14B00B7BC27 /* ContentView.swift */,
+				2DE10C362D57A14B00B7BC27 /* Info.plist */,
+				2DE10C372D57A14B00B7BC27 /* MainView.swift */,
+				2DE10C382D57A14B00B7BC27 /* SFI.entitlements */,
+				2DE10C392D57A14B00B7BC27 /* Upload.plist */,
+			);
+			path = SFI;
+			sourceTree = "<group>";
+		};
+		2DE10C3D2D57A14B00B7BC27 /* sing-box */ = {
+			isa = PBXGroup;
+			children = (
+				2DE10C312D57A14B00B7BC27 /* Library */,
+				2DE10C3A2D57A14B00B7BC27 /* SFI */,
+			);
+			path = "sing-box";
+			sourceTree = "<group>";
+		};
+		2DE10C3E2D57A14B00B7BC27 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2DE10C3D2D57A14B00B7BC27 /* sing-box */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,12 +368,13 @@
 				2DC278E02D4B725200406AAA /* Sources */,
 				2DC278E12D4B725200406AAA /* Frameworks */,
 				2DC278E22D4B725200406AAA /* Resources */,
-				2DC279142D4B79EF00406AAA /* Embed Foundation Extensions */,
+				2D089C7A2D566D440055D81C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2DC2790E2D4B79EF00406AAA /* PBXTargetDependency */,
+				2D089C792D566D440055D81C /* PBXTargetDependency */,
+				2D089C7C2D566D500055D81C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				2DC278E62D4B725200406AAA /* VPN Shiva */,
@@ -225,6 +451,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE10C612D57A14B00B7BC27 /* Info.plist in Resources */,
+				2DE10C622D57A14B00B7BC27 /* Assets.xcassets in Resources */,
+				2DE10C642D57A14B00B7BC27 /* Upload.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +461,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE10C872D57A14B00B7BC27 /* Info.plist in Resources */,
+				2DE10C882D57A14B00B7BC27 /* Assets.xcassets in Resources */,
+				2DE10C8A2D57A14B00B7BC27 /* Upload.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +474,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE10C3F2D57A14B00B7BC27 /* Profile+Date.swift in Sources */,
+				2DE10C402D57A14B00B7BC27 /* ExtensionEnvironments.swift in Sources */,
+				2DE10C412D57A14B00B7BC27 /* ExtensionErrors.swift in Sources */,
+				2DE10C422D57A14B00B7BC27 /* Profile+RW.swift in Sources */,
+				2DE10C432D57A14B00B7BC27 /* Application.swift in Sources */,
+				2DE10C442D57A14B00B7BC27 /* HTTPClient.swift in Sources */,
+				2DE10C452D57A14B00B7BC27 /* FilePath.swift in Sources */,
+				2DE10C462D57A14B00B7BC27 /* ContentView.swift in Sources */,
+				2DE10C472D57A14B00B7BC27 /* MainView.swift in Sources */,
+				2DE10C482D57A14B00B7BC27 /* Profile.swift in Sources */,
+				2DE10C492D57A14B00B7BC27 /* ProfileServer.swift in Sources */,
+				2DE10C4A2D57A14B00B7BC27 /* SystemExtension.swift in Sources */,
+				2DE10C4B2D57A14B00B7BC27 /* CommandClient.swift in Sources */,
+				2DE10C4C2D57A14B00B7BC27 /* Extension+Iterator.swift in Sources */,
+				2DE10C4D2D57A14B00B7BC27 /* ExtensionProvider.swift in Sources */,
+				2DE10C4E2D57A14B00B7BC27 /* NEVPNStatus+isConnected.swift in Sources */,
+				2DE10C4F2D57A14B00B7BC27 /* Color+Extension.swift in Sources */,
+				2DE10C502D57A14B00B7BC27 /* ApplicationDelegate.swift in Sources */,
+				2DE10C512D57A14B00B7BC27 /* Profile+Update.swift in Sources */,
+				2DE10C522D57A14B00B7BC27 /* Profile+Hashable.swift in Sources */,
+				2DE10C532D57A14B00B7BC27 /* Variant.swift in Sources */,
+				2DE10C542D57A14B00B7BC27 /* Library.swift in Sources */,
+				2DE10C552D57A14B00B7BC27 /* NWSocket.swift in Sources */,
+				2DE10C562D57A14B00B7BC27 /* Profile+Transferable.swift in Sources */,
+				2DE10C572D57A14B00B7BC27 /* Extension+RunBlocking.swift in Sources */,
+				2DE10C582D57A14B00B7BC27 /* ExtensionPlatformInterface.swift in Sources */,
+				2DE10C592D57A14B00B7BC27 /* ProfileManager.swift in Sources */,
+				2DE10C5A2D57A14B00B7BC27 /* Profile+Share.swift in Sources */,
+				2DE10C5B2D57A14B00B7BC27 /* SharedPreferences.swift in Sources */,
+				2DE10C5C2D57A14B00B7BC27 /* Bundle+Version.swift in Sources */,
+				2DE10C5D2D57A14B00B7BC27 /* ShadredPreferences+Database.swift in Sources */,
+				2DE10C5E2D57A14B00B7BC27 /* Databse.swift in Sources */,
+				2DE10C5F2D57A14B00B7BC27 /* ExtensionProfile.swift in Sources */,
 				2D90FDB72D54C86400846D1C /* ConnectionStats.swift in Sources */,
 				2D90FDB32D54C49600846D1C /* Constants.swift in Sources */,
 				2D763A052D54E5B100C739A5 /* Logger.swift in Sources */,
@@ -252,6 +517,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE10C652D57A14B00B7BC27 /* Profile+Date.swift in Sources */,
+				2DE10C662D57A14B00B7BC27 /* ExtensionEnvironments.swift in Sources */,
+				2DE10C672D57A14B00B7BC27 /* ExtensionErrors.swift in Sources */,
+				2DE10C682D57A14B00B7BC27 /* Profile+RW.swift in Sources */,
+				2DE10C692D57A14B00B7BC27 /* Application.swift in Sources */,
+				2DE10C6A2D57A14B00B7BC27 /* HTTPClient.swift in Sources */,
+				2DE10C6B2D57A14B00B7BC27 /* FilePath.swift in Sources */,
+				2DE10C6C2D57A14B00B7BC27 /* ContentView.swift in Sources */,
+				2DE10C6D2D57A14B00B7BC27 /* MainView.swift in Sources */,
+				2DE10C6E2D57A14B00B7BC27 /* Profile.swift in Sources */,
+				2DE10C6F2D57A14B00B7BC27 /* ProfileServer.swift in Sources */,
+				2DE10C702D57A14B00B7BC27 /* SystemExtension.swift in Sources */,
+				2DE10C712D57A14B00B7BC27 /* CommandClient.swift in Sources */,
+				2DE10C722D57A14B00B7BC27 /* Extension+Iterator.swift in Sources */,
+				2DE10C732D57A14B00B7BC27 /* ExtensionProvider.swift in Sources */,
+				2DE10C742D57A14B00B7BC27 /* NEVPNStatus+isConnected.swift in Sources */,
+				2DE10C752D57A14B00B7BC27 /* Color+Extension.swift in Sources */,
+				2DE10C762D57A14B00B7BC27 /* ApplicationDelegate.swift in Sources */,
+				2DE10C772D57A14B00B7BC27 /* Profile+Update.swift in Sources */,
+				2DE10C782D57A14B00B7BC27 /* Profile+Hashable.swift in Sources */,
+				2DE10C792D57A14B00B7BC27 /* Variant.swift in Sources */,
+				2DE10C7A2D57A14B00B7BC27 /* Library.swift in Sources */,
+				2DE10C7B2D57A14B00B7BC27 /* NWSocket.swift in Sources */,
+				2DE10C7C2D57A14B00B7BC27 /* Profile+Transferable.swift in Sources */,
+				2DE10C7D2D57A14B00B7BC27 /* Extension+RunBlocking.swift in Sources */,
+				2DE10C7E2D57A14B00B7BC27 /* ExtensionPlatformInterface.swift in Sources */,
+				2DE10C7F2D57A14B00B7BC27 /* ProfileManager.swift in Sources */,
+				2DE10C802D57A14B00B7BC27 /* Profile+Share.swift in Sources */,
+				2DE10C812D57A14B00B7BC27 /* SharedPreferences.swift in Sources */,
+				2DE10C822D57A14B00B7BC27 /* Bundle+Version.swift in Sources */,
+				2DE10C832D57A14B00B7BC27 /* ShadredPreferences+Database.swift in Sources */,
+				2DE10C842D57A14B00B7BC27 /* Databse.swift in Sources */,
+				2DE10C852D57A14B00B7BC27 /* ExtensionProfile.swift in Sources */,
 				2D90FDB42D54C4DE00846D1C /* Constants.swift in Sources */,
 				2D90FDB62D54C86400846D1C /* ConnectionStats.swift in Sources */,
 				2D763A042D54E5B100C739A5 /* Logger.swift in Sources */,
@@ -261,10 +559,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2DC2790E2D4B79EF00406AAA /* PBXTargetDependency */ = {
+		2D089C792D566D440055D81C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2DC279032D4B79EF00406AAA /* VPNTunnelProvider */;
-			targetProxy = 2DC2790D2D4B79EF00406AAA /* PBXContainerItemProxy */;
+			targetProxy = 2D089C782D566D440055D81C /* PBXContainerItemProxy */;
+		};
+		2D089C7C2D566D500055D81C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DC279032D4B79EF00406AAA /* VPNTunnelProvider */;
+			targetProxy = 2D089C7B2D566D500055D81C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -473,6 +776,7 @@
 				INFOPLIST_FILE = VPNTunnelProvider/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = VPNTunnelProvider;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,6 +786,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Anton-Reasin.VPN-Shiva.VPNTunnelProvider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,6 +806,7 @@
 				INFOPLIST_FILE = VPNTunnelProvider/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = VPNTunnelProvider;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,6 +816,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Anton-Reasin.VPN-Shiva.VPNTunnelProvider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

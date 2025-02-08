@@ -22,7 +22,7 @@ class VLESSSession {
         self.packetTunnelFlow = packetFlow
     }
     
-    func start(config: VLESSConfig) {
+    func start(config: VLESSConfig, completion: @escaping (Error?) -> Void) {
         self.config = config
         self.isRunning = true
         
@@ -182,21 +182,23 @@ class VLESSSession {
 
 
     // Добавляем публичный метод для отправки данных в туннель
-    func sendDataToTunnel(_ data: Data) {
+    func sendDataToTunnel(_ data: Data, completion: ((Error?) -> Void)? = nil) {
         guard isRunning else {
             Logger.log("Сессия не активна", type: .error)
+            completion?(NSError(domain: "com.vpn.error", code: -1, userInfo: [NSLocalizedDescriptionKey: "Session not active"]))
             return
         }
         
-        var packet = Data(capacity: data.count + 2) // Предварительно выделяем память
+        var packet = Data(capacity: data.count + 2)
         packet.append(vlessVersion)
-        packet.append(0x01) // TCP команда
+        packet.append(0x01)
         packet.append(data)
         
         connection?.send(content: packet, completion: .contentProcessed { error in
             if let error = error {
                 Logger.log("Ошибка отправки: \(error)", type: .error)
             }
+            completion?(error)
         })
     }
 
