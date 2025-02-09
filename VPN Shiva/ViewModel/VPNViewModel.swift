@@ -222,82 +222,82 @@ class VPNViewModel: ObservableObject {
         manager.localizedDescription = "VPN Shiva"
     }
     
-    func toggleConnection() {
-        // 1. Проверяем инициализацию менеджера
-        guard let manager = providerManager else {
-            Logger.log("❌ VPN менеджер не инициализирован", type: .error)
-            return
-        }
-        
-        // 2. Проверяем текущий статус
-        Logger.log("📱 Текущий статус: \(manager.connection.status.rawValue)", type: .debug)
-        
-        // 3. Загружаем свежие настройки
-        manager.loadFromPreferences { [weak self] error in
-            if let error = error {
-                Logger.log("❌ Ошибка загрузки настроек: \(error.localizedDescription)", type: .error)
-                return
-            }
-            
-            // 4. Проверяем, что VPN включен
-            if !manager.isEnabled {
-                Logger.log("❌ VPN отключен в настройках", type: .error)
-                // Включаем VPN
-                manager.isEnabled = true
-                manager.saveToPreferences { error in
-                    if let error = error {
-                        Logger.log("❌ Ошибка сохранения настроек: \(error.localizedDescription)", type: .error)
-                        return
-                    }
-                    // Повторяем попытку подключения после включения
-                    self?.toggleConnection()
-                }
-                return
-            }
-            
-            // 5. Проверяем конфигурацию
-            guard let proto = manager.protocolConfiguration as? NETunnelProviderProtocol else {
-                Logger.log("❌ Неверная конфигурация протокола", type: .error)
-                return
-            }
-            
-            Logger.log("✅ Проверка конфигурации: \(proto.providerBundleIdentifier ?? "nil")", type: .debug)
-            
-            // 6. Пробуем запустить VPN
-            do {
-                // Важно: добавляем проверку текущего статуса
-                if manager.connection.status == .connected {
-                    manager.connection.stopVPNTunnel()
-                    return
-                }
-                
-                Logger.log("📋 Проверка настроек перед запуском:")
-                Logger.log("- Bundle ID: \(proto.providerBundleIdentifier ?? "nil")")
-                Logger.log("- Server Address: \(proto.serverAddress ?? "nil")")
-                Logger.log("- Enabled: \(manager.isEnabled)")
-                Logger.log("- Connection Status: \(manager.connection.status.rawValue)")
-                Logger.log("- Protocol Type: \(type(of: proto))")
-                
-                if let config = proto.providerConfiguration {
-                    Logger.log("- Config Keys: \(config.keys.joined(separator: ", "))")
-                }
-                
-                try manager.connection.startVPNTunnel()
-                Logger.log("🚀 Запрос на подключение отправлен", type: .info)
-            } catch let error as NSError {
-                Logger.log("❌ Ошибка запуска туннеля: \(error.localizedDescription) (код: \(error.code))", type: .error)
-                
-                switch error.code {
-                case 3:
-                    Logger.log("❌ Неверная конфигурация VPN", type: .error)
-                case 5:
-                    Logger.log("❌ VPN отключен", type: .error)
-                default:
-                    Logger.log("❌ Неизвестная ошибка: \(error.domain)", type: .error)
-                }
-            }
-        }
-    }
+//    func toggleConnection() {
+//        // 1. Проверяем инициализацию менеджера
+//        guard let manager = providerManager else {
+//            Logger.log("❌ VPN менеджер не инициализирован", type: .error)
+//            return
+//        }
+//        
+//        // 2. Проверяем текущий статус
+//        Logger.log("📱 Текущий статус: \(manager.connection.status.rawValue)", type: .debug)
+//        
+//        // 3. Загружаем свежие настройки
+//        manager.loadFromPreferences { [weak self] error in
+//            if let error = error {
+//                Logger.log("❌ Ошибка загрузки настроек: \(error.localizedDescription)", type: .error)
+//                return
+//            }
+//            
+//            // 4. Проверяем, что VPN включен
+//            if !manager.isEnabled {
+//                Logger.log("❌ VPN отключен в настройках", type: .error)
+//                // Включаем VPN
+//                manager.isEnabled = true
+//                manager.saveToPreferences { error in
+//                    if let error = error {
+//                        Logger.log("❌ Ошибка сохранения настроек: \(error.localizedDescription)", type: .error)
+//                        return
+//                    }
+//                    // Повторяем попытку подключения после включения
+//                    self?.toggleConnection()
+//                }
+//                return
+//            }
+//            
+//            // 5. Проверяем конфигурацию
+//            guard let proto = manager.protocolConfiguration as? NETunnelProviderProtocol else {
+//                Logger.log("❌ Неверная конфигурация протокола", type: .error)
+//                return
+//            }
+//            
+//            Logger.log("✅ Проверка конфигурации: \(proto.providerBundleIdentifier ?? "nil")", type: .debug)
+//            
+//            // 6. Пробуем запустить VPN
+//            do {
+//                // Важно: добавляем проверку текущего статуса
+//                if manager.connection.status == .connected {
+//                    manager.connection.stopVPNTunnel()
+//                    return
+//                }
+//                
+//                Logger.log("📋 Проверка настроек перед запуском:")
+//                Logger.log("- Bundle ID: \(proto.providerBundleIdentifier ?? "nil")")
+//                Logger.log("- Server Address: \(proto.serverAddress ?? "nil")")
+//                Logger.log("- Enabled: \(manager.isEnabled)")
+//                Logger.log("- Connection Status: \(manager.connection.status.rawValue)")
+//                Logger.log("- Protocol Type: \(type(of: proto))")
+//                
+//                if let config = proto.providerConfiguration {
+//                    Logger.log("- Config Keys: \(config.keys.joined(separator: ", "))")
+//                }
+//                
+//                try manager.connection.startVPNTunnel()
+//                Logger.log("🚀 Запрос на подключение отправлен", type: .info)
+//            } catch let error as NSError {
+//                Logger.log("❌ Ошибка запуска туннеля: \(error.localizedDescription) (код: \(error.code))", type: .error)
+//                
+//                switch error.code {
+//                case 3:
+//                    Logger.log("❌ Неверная конфигурация VPN", type: .error)
+//                case 5:
+//                    Logger.log("❌ VPN отключен", type: .error)
+//                default:
+//                    Logger.log("❌ Неизвестная ошибка: \(error.domain)", type: .error)
+//                }
+//            }
+//        }
+//    }
 
 
     

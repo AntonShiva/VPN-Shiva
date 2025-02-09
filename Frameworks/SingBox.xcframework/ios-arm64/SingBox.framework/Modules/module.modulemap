@@ -1,0 +1,8 @@
+framework module "SingBox" {
+	header "ref.h"
+    header "Libbox.objc.h"
+    header "Universe.objc.h"
+    header "SingBox.h"
+
+    export *
+}
